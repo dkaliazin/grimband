@@ -58,25 +58,33 @@
               <td>Київ — Docker-G Pub</td>
               <td>250</td>
               <td>25.10.2025, 19:00</td>
-              <td><button class="btn-buy">Замовити квиток</button></td>
+              <td>
+                <button class="btn-buy" type="button">Замовити квиток</button>
+              </td>
             </tr>
             <tr class="concerts-table-tr">
               <td>Львів — !FESTrepublic</td>
               <td>400</td>
               <td>01.11.2025, 20:00</td>
-              <td><button class="btn-buy">Замовити квиток</button></td>
+              <td>
+                <button class="btn-buy" type="button">Замовити квиток</button>
+              </td>
             </tr>
             <tr class="concerts-table-tr">
               <td>Одеса — Зелен театр</td>
               <td>700</td>
               <td>09.11.2025, 19:30</td>
-              <td><button class="btn-buy">Замовити квиток</button></td>
+              <td>
+                <button class="btn-buy" type="button">Замовити квиток</button>
+              </td>
             </tr>
             <tr class="concerts-table-tr">
               <td>Харків — ArtZavod</td>
               <td>500</td>
               <td>16.11.2025, 19:00</td>
-              <td><button class="btn-buy">Замовити квиток</button></td>
+              <td>
+                <button class="btn-buy" type="button">Замовити квиток</button>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -88,6 +96,14 @@
       <div class="gallery-members">
         <div class="gallery-member">
           <picture>
+            <source
+              srcset="./src/max-gitara-mobile.webp"
+              media="(max-width:767.98px)"
+            />
+            <source
+              srcset="./src/max-gitara-tablet.webp"
+              media="(min-width:767.98px; max-width:1024px)"
+            />
             <img
               src="./src/max-gitara.webp"
               class="gallery-member-img"
@@ -98,6 +114,14 @@
         </div>
         <div class="gallery-member">
           <picture>
+            <source
+              srcset="./src/olena-wokal-mobile.webp"
+              media="(max-width:767.98px)"
+            />
+            <source
+              srcset="./src/olena-wokal-tablet.webp"
+              media="(min-width:767.98px; max-width:1024px)"
+            />
             <img
               src="./src/olena-wokal.webp"
               class="gallery-member-img"
@@ -108,6 +132,14 @@
         </div>
         <div class="gallery-member">
           <picture>
+            <source
+              srcset="./src/taras-barabanu-mobile.webp"
+              media="(max-width:767.98px)"
+            />
+            <source
+              srcset="./src/taras-barabanu-tablet.webp"
+              media="(min-width:767.98px; max-width:1024px)"
+            />
             <img
               src="./src/taras-barabanu.webp"
               class="gallery-member-img"
@@ -156,25 +188,37 @@
       <h2 class="contacts-header">Зв'яжись з нами</h2>
       <p class="contacts-text">Хочеш заказати виступ або маєш питання? Пиши!</p>
       <div class="contact-form-container">
-        <form class="contact-form">
-          <div class="contact-form-row">
-            <div class="contact-form-group">
-              <label for="name">Ім'я</label>
-              <input type="text" id="name" />
+        <div class="contact-form-status-box">
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formspree.io/f/xblzlkdr"
+            method="POST"
+          >
+            <div class="contact-form-row">
+              <div class="contact-form-group">
+                <label for="name">Ім'я</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="contact-form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
             </div>
-            <div class="contact-form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" />
-            </div>
-          </div>
-          <label for="message">Повідомлення</label>
-          <textarea
-            class="contact-form-message"
-            id="message"
-            placeholder="Розкажи про свої ідеї..."
-          ></textarea>
-          <button type="submit" class="contact-form-button">Відправити</button>
-        </form>
+            <label for="message">Повідомлення</label>
+            <textarea
+              class="contact-form-message"
+              id="message"
+              name="message"
+              required
+              placeholder="Розкажи про свої ідеї..."
+            ></textarea>
+            <button type="submit" class="contact-form-button">
+              Відправити
+            </button>
+          </form>
+          <div class="contact-form-status"></div>
+        </div>
         <div class="contact-map-container">
           <h3>Наше місцезнаходження</h3>
           <iframe
@@ -223,5 +267,45 @@
         </li>
       </ul>
     </footer>
+    <!--modal-->
+    <div class="modal-overlay" id="ticketModal">
+      <div class="modal">
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+        <h3 class="modal-title">Замовити квиток</h3>
+        <form class="modal-form">
+          <label>
+            Ім'я:
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Місто:
+            <select name="city" required>
+              <option value="">Оберіть місто</option>
+              <option value="kyiv">Київ</option>
+              <option value="lviv">Львів</option>
+              <option value="odesa">Одеса</option>
+              <option value="kharkiv">Харків</option>
+            </select>
+          </label>
+          <label>
+            Кількість квитків:
+            <input
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+              value="1"
+              required
+            />
+          </label>
+          <button type="submit" class="modal-submit">Підтвердити</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
   </body>
 </html>
