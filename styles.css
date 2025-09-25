@@ -20,13 +20,20 @@ body {
 .header-grimband h1 {
   font-size: 20px;
   font-weight: bold;
+  padding-bottom: 15px;
 }
-
-.header-nav-link {
-  margin-left: 20px;
+.header-mainpage-link {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
+}
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+.header-nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
 }
 
 .hero {
