@@ -5,7 +5,20 @@ body {
   color: #fff;
   line-height: 1.6;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 .header-grimband {
   display: flex;
   justify-content: space-between;
@@ -17,14 +30,12 @@ body {
   z-index: 1000;
 }
 
-.header-grimband h1 {
-  font-size: 20px;
-  font-weight: bold;
-  padding-bottom: 15px;
-}
 .header-mainpage-link {
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 .header-nav {
   display: flex;
@@ -33,42 +44,83 @@ body {
 .header-nav-link {
   text-decoration: none;
   color: #fff;
-  font-weight: 600;
+  font-weight: bold;
 }
-
+.header-nav-link:hover,
+.header-nav-link:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.header-nav-link:active {
+  color: #ffb800;
+}
 .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: left;
   background: url("https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2")
     no-repeat center/cover;
-  text-align: left;
   padding: 100px 10%;
   position: relative;
+  z-index: 0;
 }
-
-.hero h2 {
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+.hero div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero h1 {
   font-size: 36px;
   font-weight: 700;
 }
-
 .hero p {
-  max-width: 700px;
-  margin-top: 15px;
   font-size: 18px;
+  font-weight: 300;
 }
-
+.hero-text-link {
+  color: #6299cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero-text-link:hover,
+.hero-text-link:focus {
+  text-decoration: underline;
+}
+.hero-text-link:active {
+  color: #3b85ca;
+}
 .btn-primary {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: linear-gradient(45deg, #ffb800, #ff6200);
+  margin: 0;
+  padding: 12px;
+  background: linear-gradient(45deg, #ffb800, #dad726, #ffb800);
+  max-width: 160px;
   color: #000;
   font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s;
+  border: none;
+  outline: none;
 }
-
-.btn-primary:hover {
-  opacity: 0.8;
+.btn-primary:hover,
+.btn-primary:focus {
+  box-shadow: 0 4px 16px rgba(218, 215, 38, 0.4);
+}
+.btn-primary:active {
+  transform: scale(0.95);
 }
 
 .section {
