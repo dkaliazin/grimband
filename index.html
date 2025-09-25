@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- header -->
     <header class="header-grimband">
       <a href="/index.html" class="header-mainpage-link">G&G</a>
       <nav class="header-nav">
@@ -20,7 +21,7 @@
         <a href="#contacts" class="header-nav-link">Контакти</a>
       </nav>
     </header>
-
+    <!-- hero -->
     <section class="hero" id="hero">
       <h1>Гурт «Грим та Грім»</h1>
       <p>Справжній український рок, який гуркоче в серці.</p>
@@ -39,39 +40,39 @@
       </div>
       <button class="btn-primary" type="button">ЗАКАЗАТИ КВИТОК</button>
     </section>
-
-    <section class="section" id="concerts">
-      <h2>Найближчі концерти</h2>
+    <!-- concerts -->
+    <section class="concerts" id="concerts">
       <div class="table-box">
-        <table>
+        <h3 class="concerts-header">Найближчі концерти</h3>
+        <table class="concerts-table">
           <thead>
-            <tr>
-              <th>Місто / Заклад</th>
-              <th>К-сть місць</th>
-              <th>Дата і час</th>
-              <th></th>
+            <tr class="concerts-table-tr">
+              <th class="concerts-table-th">Місто / Заклад</th>
+              <th class="concerts-table-th">К-сть місць</th>
+              <th class="concerts-table-th">Дата і час</th>
+              <th class="concerts-table-th"></th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
+          <tbody class="concerts-table-tbody">
+            <tr class="concerts-table-tr">
               <td>Київ — Docker-G Pub</td>
               <td>250</td>
               <td>25.10.2025, 19:00</td>
               <td><button class="btn-buy">Замовити квиток</button></td>
             </tr>
-            <tr>
+            <tr class="concerts-table-tr">
               <td>Львів — !FESTrepublic</td>
               <td>400</td>
               <td>01.11.2025, 20:00</td>
               <td><button class="btn-buy">Замовити квиток</button></td>
             </tr>
-            <tr>
-              <td>Одеса — Зелений театр</td>
+            <tr class="concerts-table-tr">
+              <td>Одеса — Зелен театр</td>
               <td>700</td>
               <td>09.11.2025, 19:30</td>
               <td><button class="btn-buy">Замовити квиток</button></td>
             </tr>
-            <tr>
+            <tr class="concerts-table-tr">
               <td>Харків — ArtZavod</td>
               <td>500</td>
               <td>16.11.2025, 19:00</td>
@@ -81,26 +82,26 @@
         </table>
       </div>
     </section>
-
-    <section class="section" id="gallery">
-      <h2>Учасники гурту</h2>
-      <div class="members">
-        <div class="member">
+    <!-- gallery -->
+    <section class="gallery" id="gallery">
+      <h2 class="gallery-header">Учасники гурту</h2>
+      <div class="gallery-members">
+        <div class="gallery-member">
           <img src="https://placekitten.com/400/300" alt="Максим — гітара" />
           <p>Максим — гітара</p>
         </div>
-        <div class="member">
+        <div class="gallery-member">
           <img src="https://placekitten.com/401/300" alt="Олена — вокал" />
           <p>Олена — вокал</p>
         </div>
-        <div class="member">
+        <div class="gallery-member">
           <img src="https://placekitten.com/402/300" alt="Тарас — барабани" />
           <p>Тарас — барабани</p>
         </div>
       </div>
     </section>
-
-    <section class="section">
+    <!-- history -->
+    <section class="history">
       <h2>Наша історія</h2>
       <div class="history">
         <p>
@@ -108,14 +109,11 @@
           серцем. Ми почали свій шлях із маленьких клубів у центрі Києва, але
           кожен виступ, кожне слово було наповнене емоціями та переживаннями.
         </p>
-        <img
-          src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2"
-          alt="Концерт"
-        />
+        <img src="./src/concert-image.jpg" alt="Концерт" />
       </div>
     </section>
-
-    <section class="section" id="contacts">
+    <!-- contacts -->
+    <section class="contacts" id="contacts">
       <h2>Зв'яжись з нами</h2>
       <div class="contact-form">
         <form>
@@ -129,7 +127,7 @@
         ></iframe>
       </div>
     </section>
-
+    <!-- footer -->
     <footer>© 2025 «Грим та Грім». Всі права захищені.</footer>
   </body>
 </html>
