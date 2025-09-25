@@ -87,47 +87,141 @@
       <h2 class="gallery-header">Учасники гурту</h2>
       <div class="gallery-members">
         <div class="gallery-member">
-          <img src="https://placekitten.com/400/300" alt="Максим — гітара" />
-          <p>Максим — гітара</p>
+          <picture>
+            <img
+              src="./src/max-gitara.webp"
+              class="gallery-member-img"
+              alt="Максим — гітара"
+            />
+          </picture>
+          <p class="gallery-member-text">Максим — гітара</p>
         </div>
         <div class="gallery-member">
-          <img src="https://placekitten.com/401/300" alt="Олена — вокал" />
-          <p>Олена — вокал</p>
+          <picture>
+            <img
+              src="./src/olena-wokal.webp"
+              class="gallery-member-img"
+              alt="Олена — вокал"
+            />
+          </picture>
+          <p class="gallery-member-text">Олена — вокал</p>
         </div>
         <div class="gallery-member">
-          <img src="https://placekitten.com/402/300" alt="Тарас — барабани" />
-          <p>Тарас — барабани</p>
+          <picture>
+            <img
+              src="./src/taras-barabanu.webp"
+              class="gallery-member-img"
+              alt="Тарас — барабани"
+            />
+          </picture>
+          <p class="gallery-member-text">Тарас — барабани</p>
         </div>
       </div>
     </section>
     <!-- history -->
     <section class="history">
-      <h2>Наша історія</h2>
-      <div class="history">
+      <h2 class="history-header">Наша історія</h2>
+      <div class="history-content">
+        <img src="./src/concert-image.webp" alt="Концерт" class="history-img" />
         <p>
           «Грим та Грім» народився з бажання створювати музику, яка відчувається
-          серцем. Ми почали свій шлях із маленьких клубів у центрі Києва, але
-          кожен виступ, кожне слово було наповнене емоціями та переживаннями.
+          серцем. Ми почали свій шлях із маленької студії в центрі Києва, де
+          кожен акорд, кожне слово було наповнене емоціями та переживаннями. Це
+          було місце, де народжувались наші перші пісні, де ми вчились грати
+          разом як єдиний організм.
         </p>
-        <img src="./src/concert-image.jpg" alt="Концерт" />
+        <p>
+          За роки нашої діяльності ми виступили на десятках сцен, від невеликих
+          клубів до великих фестивалів. Наша музика — це поєднання традиційного
+          року з сучасними елементами, що робить її унікальною та впізнаваною.
+          Ми не боїмося експериментувати із звуком, додаючи електронні елементи
+          або народні інструменти.
+        </p>
+        <p>
+          Кожен наш виступ — це не просто концерт, а справжня подія, де ми
+          ділимось своєю енергією з глядачами та створюємо неповторну атмосферу.
+          Ми віримо, що музика має силу об'єднувати людей, створювати спільноти
+          та надихати на зміни.
+        </p>
+        <p>
+          Наш колектив складається з досвідчених музикантів, кожен з яких
+          привносить свій унікальний стиль та бачення. Максим створює неймовірні
+          гітарні рифи, Олена зачаровує своїм вокалом, а Тарас тримає ритм, який
+          змушує серця битися в унісон з музикою.
+        </p>
       </div>
     </section>
     <!-- contacts -->
     <section class="contacts" id="contacts">
-      <h2>Зв'яжись з нами</h2>
-      <div class="contact-form">
-        <form>
-          <input type="text" placeholder="Ім'я" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Повідомлення"></textarea>
-          <button>Відправити</button>
+      <h2 class="contacts-header">Зв'яжись з нами</h2>
+      <p class="contacts-text">Хочеш заказати виступ або маєш питання? Пиши!</p>
+      <div class="contact-form-container">
+        <form class="contact-form">
+          <div class="contact-form-row">
+            <div class="contact-form-group">
+              <label for="name">Ім'я</label>
+              <input type="text" id="name" />
+            </div>
+            <div class="contact-form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" />
+            </div>
+          </div>
+          <label for="message">Повідомлення</label>
+          <textarea
+            class="contact-form-message"
+            id="message"
+            placeholder="Розкажи про свої ідеї..."
+          ></textarea>
+          <button type="submit" class="contact-form-button">Відправити</button>
         </form>
-        <iframe
-          src="https://maps.google.com/maps?q=kyiv&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        ></iframe>
+        <div class="contact-map-container">
+          <h3>Наше місцезнаходження</h3>
+          <iframe
+            src="https://maps.google.com/maps?q=kyiv&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
       </div>
     </section>
     <!-- footer -->
-    <footer>© 2025 «Грим та Грім». Всі права захищені.</footer>
+    <footer>
+      <div>
+        <p class="footer-text">© 2025 «Грим та Грім». Всі права захищені.</p>
+        <address class="footer-address">
+          <a href="mailto:booking@lotoplay">booking@lotoplay</a>
+          <span aria-hidden="true" class="footer-circle-element"></span>
+          <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+        </address>
+      </div>
+
+      <ul class="footer-socials-list">
+        <li>
+          <a
+            href="https://www.instagram.com/lotoplaycom/"
+            target="_blank"
+            class="footer-socials-link"
+            >Instagram</a
+          >
+        </li>
+        <li><span aria-hidden="true" class="footer-circle-element"></span></li>
+        <li>
+          <a
+            href="https://www.youtube.com/c/lotoplay"
+            target="_blank"
+            class="footer-socials-link"
+            >Youtube</a
+          >
+        </li>
+        <li><span aria-hidden="true" class="footer-circle-element"></span></li>
+        <li>
+          <a
+            href="https://www.facebook.com/LotoPlayWeb/about/?_rdr"
+            target="_blank"
+            class="footer-socials-link"
+            >Facebook</a
+          >
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
